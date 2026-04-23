@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Container } from '../Layout/Container'
-import { PetCard } from '../UI/PetCard'
-import { PetModal } from '../UI/PetModal'
-import { Button } from '../UI/Button'
+import { PetCard } from '../ui/PetCard'
+import { PetModal } from '../ui/PetModal'
+import { Button } from '../ui/Button'
 import { Pet } from '../../../types'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 

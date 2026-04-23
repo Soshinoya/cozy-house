@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router'
 import React from 'react'
-import { Button } from '../UI/Button'
+import { Button } from '../ui/Button'
 import imgStartScreenPuppy from '../../../assets/puppy-start-screen.png'
 
 export const Hero: React.FC = () => {
