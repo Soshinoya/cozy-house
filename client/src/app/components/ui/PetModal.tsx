@@ -30,7 +30,11 @@ export const PetModal: React.FC<PetModalProps> = ({ pet, open, onClose }) => {
 				</DialogClose>
 				<div className='grid min-[860px]:grid-cols-2 min-[860px]:w-[630px] rounded-lg overflow-hidden'>
 					<div className='h-[350px] hidden min-[860px]:block md:h-auto overflow-hidden'>
-						<img src={`./assets/${pet.image}`} alt={pet.name} className='w-full h-full object-cover' />
+						<img
+							src={`https://cdn.jsdelivr.net/gh/Soshinoya/cozy-house@main/client/assets/${pet.image}`}
+							alt={pet.name}
+							className='w-full h-full object-cover'
+						/>
 					</div>
 					<div className='bg-white p-8 md:p-10 flex flex-col gap-[10px] overflow-y-auto max-h-[350px] md:max-h-[500px]'>
 						<h2 className='max-[860px]:text-center font-[Georgia,serif] text-[#292929] text-[2.1875rem] leading-[1.3] tracking-[0.06em] m-0'>
