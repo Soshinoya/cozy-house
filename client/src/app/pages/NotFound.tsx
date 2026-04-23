@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Container } from '../components/Layout/Container';
-import { Button } from '../components/UI/Button';
+import { Button } from '../components/ui/Button';
 import { Home } from 'lucide-react';
 
 export const NotFound: React.FC = () => {
