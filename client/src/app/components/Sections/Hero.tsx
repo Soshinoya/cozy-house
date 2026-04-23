@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router'
 import React from 'react'
 import { Button } from '../UI/Button'
 import imgStartScreenPuppy from '../../../assets/puppy-start-screen.png'
 
 export const Hero: React.FC = () => {
+	const navigate = useNavigate()
+
 	return (
 		<section className='relative flex items-center overflow-hidden pt-[220px] px-5 md:px-8 lg:px-16'>
 			<div
@@ -25,7 +28,7 @@ export const Hero: React.FC = () => {
 							He or she will love you more than anybody else in the world, you will see!
 						</p>
 						<div>
-							<Button variant='primary' size='md' onClick={() => (window.location.href = '/pets')}>
+							<Button variant='primary' size='md' onClick={() => navigate('/pets')}>
 								Make a friend
 							</Button>
 						</div>
