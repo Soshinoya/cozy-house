@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Container } from '../components/Layout/Container'
-import { PetCard } from '../components/UI/PetCard'
-import { PetModal } from '../components/UI/PetModal'
 import { Pet } from '../../types'
+import { PetCard } from '../components/ui/PetCard'
+import { PetModal } from '../components/ui/PetModal'
 
 interface ApiResponse {
 	pets: Pet[]
