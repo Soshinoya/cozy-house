@@ -1,0 +1,5 @@
+export { Hero } from './Hero'
+export { About } from './About'
+export { OurFriends } from './OurFriends'
+export { HowYouCanHelp } from './HowYouCanHelp'
+export { Donation } from './Donation'
