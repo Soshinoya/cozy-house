@@ -7,7 +7,7 @@ const app = express()
 const port = process.env.PORT || 3001
 
 // Middleware
-app.use(cors({ origin: 'https://cozy-house-mgok.netlify.app', methods: ['GET', 'POST', 'PUT', 'DELETE'] }))
+app.use(cors({ origin: 'https://cozy-house-mgok.vercel.app', methods: ['GET', 'POST', 'PUT', 'DELETE'] }))
 app.use(express.json())
 
 // PostgreSQL connection pool
