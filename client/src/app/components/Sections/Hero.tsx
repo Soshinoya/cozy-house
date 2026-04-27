@@ -19,17 +19,17 @@ export const Hero: React.FC = () => {
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
 					<div className='flex flex-col gap-10 text-center lg:text-left'>
 						<h1 className='font-[Georgia,serif] text-white text-[2.5rem] md:text-[2.75rem] leading-[1.3] tracking-[0.06em] m-0'>
-							Not only people
+							Не только людям
 							<br />
-							need a house
+							нужен дом
 						</h1>
 						<p className='font-[Arial,sans-serif] text-[#cdcdcd] text-[0.9375rem] leading-[1.6] max-w-[28.125rem]'>
-							We offer to give a chance to a little and nice puppy with an extremely wide and open heart.
-							He or she will love you more than anybody else in the world, you will see!
+							Мы предлагаем дать шанс маленькому и доброму щенку с огромным и открытым сердцем.
+							Он или она будет любить вас больше всех на свете, вы увидите!
 						</p>
 						<div>
 							<Button variant='primary' size='md' onClick={() => navigate('/pets')}>
-								Make a friend
+								Найти друга
 							</Button>
 						</div>
 					</div>

@@ -4,10 +4,10 @@ import { Menu, X } from 'lucide-react'
 import { NavLink } from '../../../types'
 
 const navLinks: NavLink[] = [
-	{ label: 'About the shelter', path: '/' },
-	{ label: 'Our pets', path: '/pets' },
-	{ label: 'Help the shelter', path: '/help' },
-	{ label: 'Contacts', path: '/contacts' },
+	{ label: 'О приюте', path: '/' },
+	{ label: 'Наши питомцы', path: '/pets' },
+	{ label: 'Помощь приюту', path: '/help' },
+	{ label: 'Контакты', path: '/contacts' },
 ]
 
 export const Header: React.FC = () => {
@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
 						<p
 							className={`font-[Arial,sans-serif] text-[0.8125rem] leading-normal tracking-[0.1em] mt-1 ${isHomePage ? 'text-white' : 'text-[#4c4c4c]'}`}
 						>
-							Shelter for pets in Boston
+							Приют для животных в Москве
 						</p>
 					</Link>
 					<ul className='hidden md:flex items-center gap-8 list-none m-0 p-0'>

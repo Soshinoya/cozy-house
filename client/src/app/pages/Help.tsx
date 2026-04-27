@@ -13,7 +13,7 @@ export const Help: React.FC = () => {
 			>
 				<Container>
 					<h1 className='font-[Georgia,serif] text-white text-[2.5rem] md:text-[3.75rem] leading-[1.3] tracking-[0.06em] text-center m-0'>
-						Help the shelter
+						Помощь приюту
 					</h1>
 				</Container>
 			</section>

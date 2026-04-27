@@ -47,10 +47,10 @@ export const PetModal: React.FC<PetModalProps> = ({ pet, open, onClose }) => {
 							{pet.description}
 						</p>
 						<ul className='pl-[17px] p-0 m-0 flex flex-col gap-[0.75rem] text-[0.9375rem] leading-[1.1] tracking-[0]'>
-							<InfoItem label='Age' value={pet.age} />
-							<InfoItem label='Inoculations' value={pet.inoculations?.join(', ')} />
-							<InfoItem label='Diseases' value={pet.diseases?.join(', ')} />
-							<InfoItem label='Parasites' value={pet.parasites?.join(', ')} />
+							<InfoItem label='Возраст' value={pet.age} />
+							<InfoItem label='Прививки' value={pet.inoculations?.join(', ')} />
+							<InfoItem label='Заболевания' value={pet.diseases?.join(', ')} />
+							<InfoItem label='Паразиты' value={pet.parasites?.join(', ')} />
 						</ul>
 					</div>
 				</div>

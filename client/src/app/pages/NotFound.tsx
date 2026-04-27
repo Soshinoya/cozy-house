@@ -13,16 +13,16 @@ export const NotFound: React.FC = () => {
             404
           </h1>
           <h2 className="font-[Georgia,serif] text-[#545454] text-[2rem] md:text-[2.5rem] leading-[1.3] tracking-[0.06em] m-0">
-            Page Not Found
+            Страница не найдена
           </h2>
           <p className="font-[Arial,sans-serif] text-[#4c4c4c] text-[1.125rem] leading-[1.6] max-w-[600px]">
-            The page you are looking for doesn't exist or has been moved. 
-            Let's get you back to finding your new best friend!
+            Страница, которую вы ищете, не существует или была перемещена.
+            Давайте вернём вас к поиску вашего нового лучшего друга!
           </p>
           <Link to="/">
             <Button variant="primary" size="md">
               <Home size={20} className="mr-2" />
-              Back to Home
+              На главную
             </Button>
           </Link>
         </div>

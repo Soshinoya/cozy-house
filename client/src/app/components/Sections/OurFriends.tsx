@@ -67,9 +67,9 @@ export const OurFriends: React.FC = () => {
 			<Container>
 				<div className='flex flex-col items-center gap-12'>
 					<h2 className='font-[Georgia,serif] text-[#545454] text-[2.1875rem] md:text-[2.1875rem] leading-[1.3] tracking-[0.06em] text-center m-0'>
-						Our friends who
+						Наши друзья,
 						<br />
-						are looking for a house
+						которые ищут дом
 					</h2>
 					<div className='overflow-hidden w-full max-w-4xl mx-auto'>
 						<div
@@ -115,7 +115,7 @@ export const OurFriends: React.FC = () => {
 						</button>
 					</div>
 					<Button variant='primary' size='md' onClick={() => (window.location.href = '/pets')}>
-						Get to know the rest
+						Познакомиться с остальными
 					</Button>
 				</div>
 			</Container>

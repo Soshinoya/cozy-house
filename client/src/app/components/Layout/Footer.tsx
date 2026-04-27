@@ -16,24 +16,24 @@ export const Footer: React.FC = () => {
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-start'>
 					<div>
 						<h3 className='font-[Georgia,serif] text-white text-[2.1875rem] leading-[1.3] tracking-[0.06em] mb-10'>
-							For questions
+							По вопросам
 							<br />
-							and suggestions
+							и предложениям
 						</h3>
 						<div className='flex flex-col gap-5'>
 							<a
-								href='mailto:email@shelter.com'
+								href='mailto:email@prijut.ru'
 								className='flex items-center gap-5 text-[#f1cdb3] text-[1.25rem] font-[Georgia,serif] leading-[1.3] tracking-[0.06em] no-underline hover:text-[#fddcc4] transition-colors'
 							>
 								<Mail size={40} />
-								<span>email@shelter.com</span>
+								<span>email@prijut.ru</span>
 							</a>
 							<a
 								href='tel:+136745677554'
 								className='flex items-center gap-5 text-[#f1cdb3] text-[1.25rem] font-[Georgia,serif] leading-[1.3] tracking-[0.06em] no-underline hover:text-[#fddcc4] transition-colors'
 							>
 								<Phone size={40} />
-								<span>+13 674 567 75 54</span>
+								<span>+7 495 123-45-67</span>
 							</a>
 						</div>
 					</div>
@@ -41,9 +41,9 @@ export const Footer: React.FC = () => {
 					{/* Visit Us */}
 					<div>
 						<h3 className='font-[Georgia,serif] text-white text-[2.1875rem] leading-[1.3] tracking-[0.06em] mb-10'>
-							We are waiting
+							Мы ждём
 							<br />
-							for your visit
+							вашего визита
 						</h3>
 						<div className='flex flex-col gap-5'>
 							<a
@@ -54,9 +54,9 @@ export const Footer: React.FC = () => {
 							>
 								<MapPin size={40} />
 								<span>
-									1 Central Street, Boston
+									ул. Тверская, д. 1, Москва
 									<br />
-									(entrance from the store)
+									(вход со стороны магазина)
 								</span>
 							</a>
 							<a
@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
 								className='flex items-center gap-5 text-[#f1cdb3] text-[1.25rem] font-[Georgia,serif] leading-[1.3] tracking-[0.06em] no-underline hover:text-[#fddcc4] transition-colors'
 							>
 								<MapPin size={40} />
-								<span>18 South Park, London</span>
+								<span>ул. Арбат, д. 18, Москва</span>
 							</a>
 						</div>
 					</div>

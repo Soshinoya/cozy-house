@@ -20,22 +20,22 @@ export const About: React.FC = () => {
 					{/* Content */}
 					<div className='flex flex-col gap-6 order-1 lg:order-2'>
 						<h2 className='font-[Georgia,serif] text-[#545454] text-[2.1875rem] md:text-[2.1875rem] leading-[1.3] tracking-[0.06em] m-0'>
-							About the shelter
+							О приюте
 							<br />
-							"Cozy House"
+							"Уютный Дом"
 						</h2>
 						<div className='flex flex-col gap-6 font-[Arial,sans-serif] text-[#4c4c4c] text-[0.9375rem] leading-[1.6]'>
 							<p>
-								Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20%
-								of them will find a family. The others will continue to live with us and will be waiting
-								for a lucky chance to become dearly loved.
+								В настоящее время у нас на попечении 121 собака и 342 кошки, и статистика показывает, что только 20%
+								из них найдут семью. Остальные продолжат жить с нами и будут ждать
+								своего счастливого шанса стать любимыми.
 							</p>
 							<p>
-								We feed our wards with the best food and make sure that they do not get sick, feel
-								comfortable (including psychologically) and well. We are supported by 87 volunteers and
-								28 employees of various skill levels. About 12% of the animals are taken by the shelter
-								staff. Taking care of the animals, they become attached to the pets and would hardly
-								ever leave them alone.
+								Мы кормим наших подопечных лучшим кормом и следим за тем, чтобы они не болели,
+								чувствовали себя комфортно (в том числе психологически) и хорошо. Нам помогают 87 волонтёров и
+								28 сотрудников различной квалификации. Около 12% животных забирают себе
+								сотрудники приюта. Заботясь о животных, они привязываются к ним и вряд ли
+								когда-нибудь оставят их в одиночестве.
 							</p>
 						</div>
 					</div>
