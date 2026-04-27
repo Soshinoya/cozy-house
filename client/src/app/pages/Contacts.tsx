@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from '../components/Layout/Container'
 import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 
-export const Контакты: React.FC = () => {
+export const Contacts: React.FC = () => {
 	return (
 		<main className='bg-white'>
 			{/* Hero Section */}
@@ -27,8 +27,7 @@ export const Контакты: React.FC = () => {
 						<div className='flex flex-col gap-10'>
 							<h2 className='font-[Georgia,serif] text-[#545454] text-[2.1875rem] leading-[1.3] tracking-[0.06em] m-0'>
 								По вопросам
-								<br />
-								и предложениям
+								<br />и предложениям
 							</h2>
 							<div className='flex flex-col gap-6'>
 								<a
