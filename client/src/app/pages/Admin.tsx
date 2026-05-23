@@ -194,8 +194,12 @@ export const Admin: React.FC = () => {
 			<Container>
 				<div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8'>
 					<div className='space-y-1'>
-						<h1 className='text-2xl md:text-3xl font-serif font-bold text-gray-900'>Управление питомцами</h1>
-						<p className='text-gray-500 text-sm md:text-base'>Редактируйте информацию о животных в базе данных</p>
+						<h1 className='text-2xl md:text-3xl font-serif font-bold text-gray-900'>
+							Управление питомцами
+						</h1>
+						<p className='text-gray-500 text-sm md:text-base'>
+							Редактируйте информацию о животных в базе данных
+						</p>
 					</div>
 					<Button
 						onClick={() => handleOpenModal()}
@@ -206,7 +210,6 @@ export const Admin: React.FC = () => {
 				</div>
 
 				<div className='bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden'>
-					{/* Desktop Table */}
 					<div className='hidden md:block'>
 						<Table>
 							<TableHeader>
@@ -274,7 +277,9 @@ export const Admin: React.FC = () => {
 								<div key={pet.id} className='p-4 flex items-center justify-between gap-4'>
 									<div className='space-y-1'>
 										<p className='font-medium text-gray-900'>{pet.name}</p>
-										<p className='text-sm text-gray-500'>{pet.breed}, {pet.age}</p>
+										<p className='text-sm text-gray-500'>
+											{pet.breed}, {pet.age}
+										</p>
 									</div>
 									<div className='flex gap-2'>
 										<Button
@@ -400,13 +405,17 @@ export const Admin: React.FC = () => {
 								</div>
 
 								<div className='flex flex-col sm:flex-row justify-end gap-3 mt-6'>
-									<Button type='button' variant='outline' onClick={() => setIsModalOpen(false)} className='w-full sm:w-auto'>
+									<Button
+										type='button'
+										variant='outline'
+										onClick={() => setIsModalOpen(false)}
+										className='w-full sm:w-auto'
+									>
 										Отмена
 									</Button>
 									<Button
 										type='submit'
 										className='bg-[#5B483A] text-white hover:bg-[#4a3a2e] w-full sm:w-auto'
-										disabled={loading}
 									>
 										{loading ? 'Сохранение...' : 'Сохранить'}
 									</Button>
@@ -414,8 +423,8 @@ export const Admin: React.FC = () => {
 							</form>
 						</DialogContent>
 					</Dialog>
-				</Container>
-			</main>
-		)
-	}
+				</div>
+			</Container>
+		</main>
+	)
 }
