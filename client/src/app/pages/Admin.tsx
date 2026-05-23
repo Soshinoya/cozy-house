@@ -283,6 +283,7 @@ export const Admin: React.FC = () => {
 									</div>
 									<div className='flex gap-2'>
 										<Button
+											style={{ padding: '0' }}
 											variant='outline'
 											size='sm'
 											onClick={() => handleOpenModal(pet)}
@@ -291,6 +292,7 @@ export const Admin: React.FC = () => {
 											<Edit size={14} />
 										</Button>
 										<Button
+											style={{ padding: '0' }}
 											variant='outline'
 											size='sm'
 											onClick={() => handleDeletePet(pet.id)}
