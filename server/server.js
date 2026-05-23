@@ -7,8 +7,14 @@ const app = express()
 const port = process.env.PORT || 3001
 
 // Middleware
-app.use(cors({ origin: 'https://cozy-house-mgok.vercel.app', methods: ['GET', 'POST', 'PUT', 'DELETE'] }))
+// app.use(cors({ origin: 'http://localhost:5173', methods: ['GET', 'POST', 'PUT', 'DELETE'] }))
 app.use(express.json())
+app.use(cors({ origin: 'https://cozy-house-mgok.vercel.app', methods: ['GET', 'POST', 'PUT', 'DELETE'] }))
+
+const pool = new Pool({
+	connectionString: process.env.DB_URL,
+	ssl: false,
+})
 
 // PostgreSQL connection pool
 // const pool = new Pool({
@@ -19,9 +25,24 @@ app.use(express.json())
 // 	port: process.env.DB_PORT,
 // })
 
-const pool = new Pool({
-	connectionString: process.env.DB_URL,
-	ssl: false,
+// Admin auth middleware
+const adminAuth = (req, res, next) => {
+	const password = req.headers['x-admin-password']
+	if (password === process.env.ADMIN_PASSWORD) {
+		next()
+	} else {
+		res.status(401).json({ error: 'Unauthorized: Invalid admin password' })
+	}
+}
+
+// Verify admin password
+app.post('/api/auth/verify', (req, res) => {
+	const { password } = req.body
+	if (password === process.env.ADMIN_PASSWORD) {
+		res.json({ authenticated: true })
+	} else {
+		res.status(401).json({ authenticated: false, error: 'Неверный пароль' })
+	}
 })
 
 // Test database connection
@@ -92,7 +113,7 @@ app.get('/api/pets/:id', async (req, res) => {
 })
 
 // POST new pet
-app.post('/api/pets', async (req, res) => {
+app.post('/api/pets', adminAuth, async (req, res) => {
 	try {
 		const { id, name, image, breed, age, description, inoculations, diseases, parasites } = req.body
 
@@ -114,7 +135,7 @@ app.post('/api/pets', async (req, res) => {
 })
 
 // PUT update pet
-app.put('/api/pets/:id', async (req, res) => {
+app.put('/api/pets/:id', adminAuth, async (req, res) => {
 	try {
 		const { id } = req.params
 		const { name, image, breed, age, description, inoculations, diseases, parasites } = req.body
@@ -136,7 +157,7 @@ app.put('/api/pets/:id', async (req, res) => {
 })
 
 // DELETE pet
-app.delete('/api/pets/:id', async (req, res) => {
+app.delete('/api/pets/:id', adminAuth, async (req, res) => {
 	try {
 		const { id } = req.params
 		const result = await pool.query('DELETE FROM pets WHERE id = $1 RETURNING *', [id])

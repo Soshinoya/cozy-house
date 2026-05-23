@@ -4,6 +4,8 @@ import { Pet } from '../../types'
 import { PetCard } from '../components/ui/PetCard'
 import { PetModal } from '../components/ui/PetModal'
 
+import { API_URL } from '../../main'
+
 interface ApiResponse {
 	pets: Pet[]
 	pagination: {
@@ -35,9 +37,7 @@ export const Pets: React.FC = () => {
 	useEffect(() => {
 		const fetchAllPets = async () => {
 			try {
-				const response = await fetch(
-					`https://cozy-house.onrender.com/api/pets?page=${currentPage}&limit=${petsPerPage}`,
-				)
+				const response = await fetch(`${API_URL}/pets?page=${currentPage}&limit=${petsPerPage}`)
 				if (!response.ok) {
 					throw new Error('Failed to fetch pets')
 				}

@@ -5,6 +5,7 @@ import { PetModal } from '../ui/PetModal'
 import { Button } from '../ui/Button'
 import { Pet } from '../../../types'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { API_URL } from '../../../main'
 
 export const OurFriends: React.FC = () => {
 	const [selectedPet, setSelectedPet] = useState<Pet | null>(null)
@@ -18,7 +19,7 @@ export const OurFriends: React.FC = () => {
 	useEffect(() => {
 		const fetchPets = async () => {
 			try {
-				const response = await fetch('https://cozy-house.onrender.com/api/pets/all')
+				const response = await fetch(`${API_URL}/pets/all`)
 				if (!response.ok) {
 					throw new Error('Failed to fetch pets')
 				}

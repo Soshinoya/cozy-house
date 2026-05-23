@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react'
+
 export interface Pet {
 	id: string
 	name: string
@@ -22,6 +24,7 @@ export interface ButtonProps {
 	onClick?: () => void
 	className?: string
 	type?: 'button' | 'submit' | 'reset'
+	style?: CSSProperties
 }
 
 export interface CardProps {
