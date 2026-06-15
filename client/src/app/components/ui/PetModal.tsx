@@ -31,7 +31,7 @@ export const PetModal: React.FC<PetModalProps> = ({ pet, open, onClose }) => {
 				<div className='grid min-[860px]:grid-cols-2 min-[860px]:w-[630px] rounded-lg overflow-hidden'>
 					<div className='h-[350px] hidden min-[860px]:block md:h-auto overflow-hidden'>
 						<img
-							src={`https://cdn.jsdelivr.net/gh/Soshinoya/cozy-house@main/client/assets/${pet.image}`}
+							src={pet.image.startsWith('http') ? pet.image : `https://cdn.jsdelivr.net/gh/Soshinoya/cozy-house@main/client/assets/${pet.image}`}
 							alt={pet.name}
 							className='w-full h-full object-cover'
 						/>

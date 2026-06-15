@@ -9,7 +9,7 @@ export const PetCard: React.FC<PetCardProps> = ({ pet, onLearnMore, className = 
 			<div className='flex flex-col items-center text-center'>
 				<div className='w-full justify-center flex h-[270px] overflow-hidden'>
 					<img
-						src={`https://cdn.jsdelivr.net/gh/Soshinoya/cozy-house@main/client/assets/${pet.image}`}
+						src={pet.image.startsWith('http') ? pet.image : `https://cdn.jsdelivr.net/gh/Soshinoya/cozy-house@main/client/assets/${pet.image}`}
 						alt={pet.name}
 						className='h-full object-cover'
 						loading='lazy'

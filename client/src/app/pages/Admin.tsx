@@ -104,6 +104,12 @@ export const Admin: React.FC = () => {
 
 	const handleSavePet = async (e: React.FormEvent) => {
 		e.preventDefault()
+
+		if (formData.image && !formData.image.startsWith('http')) {
+			alert('Пожалуйста, введите корректную внешнюю ссылку на изображение (начиная с http:// или https://)')
+			return
+		}
+
 		setLoading(true)
 		try {
 			const method = editingPet ? 'PUT' : 'POST'
@@ -364,7 +370,7 @@ export const Admin: React.FC = () => {
 										name='image'
 										value={formData.image || ''}
 										onChange={handleInputChange}
-										placeholder='pet-image.png'
+										placeholder='https://example.com/image.jpg'
 									/>
 								</div>
 
